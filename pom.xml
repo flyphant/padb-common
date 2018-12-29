@@ -4,14 +4,9 @@
 	<groupId>cn.iq99</groupId>
 	<artifactId>padb</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1-RELEASE</version>
+	<version>0.0.3-RELEASE</version>
 	<name>padb</name>
 	<url>https://github.com/flyphant/padb.git</url>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -42,6 +37,7 @@
 	<profiles>
 		<profile>
 			<id>release</id> <!-- 部署要用到 -->
+
 			<build>
 				<plugins>
 					<plugin>
@@ -87,7 +83,7 @@
 						</executions>
 					</plugin>
 					<!-- GPG -->
-					<plugin>
+					<plugin> <!-- 进行延签 -->
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
 						<version>1.5</version>
@@ -106,11 +102,46 @@
 		</profile>
 	</profiles>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-
-
+	<!-- Inherit defaults from Spring Boot -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>padb</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
