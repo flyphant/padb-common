@@ -4,7 +4,7 @@
 	<groupId>cn.iq99</groupId>
 	<artifactId>padb</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.3-RELEASE</version>
+	<version>0.0.5-RELEASE</version>
 	<name>padb</name>
 	<url>https://github.com/flyphant/padb.git</url>
 	<licenses>
@@ -40,7 +40,7 @@
 
 			<build>
 				<plugins>
-					<plugin>
+					<plugin> <!-- 自动发布插件 -->
 						<groupId>org.sonatype.plugins</groupId>
 						<artifactId>nexus-staging-maven-plugin</artifactId>
 						<version>1.6.7</version>
@@ -52,7 +52,7 @@
 						</configuration>
 					</plugin>
 					<!-- Source -->
-					<plugin>
+					<plugin> <!-- 打包源代码 -->
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
 						<version>2.2.1</version>
@@ -135,13 +135,4 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
-	<build>
-		<finalName>padb</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>
