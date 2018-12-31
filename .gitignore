@@ -1,2 +1,9 @@
 /build/
 /target/
+/bin/
+/target/
+/.gradle/
+.classpath
+.gitignore
+.project
+/.settings/
