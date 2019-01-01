@@ -4,7 +4,7 @@
 	<groupId>cn.iq99</groupId>
 	<artifactId>padb</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.5-RELEASE</version>
+	<version>0.0.6-RELEASE</version>
 	<name>padb</name>
 	<url>https://github.com/flyphant/padb.git</url>
 	<licenses>
@@ -115,6 +115,10 @@
 		<version>1.5.3.RELEASE</version>
 	</parent>
 	<dependencies>
+		 <dependency>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-web</artifactId>
+	     </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

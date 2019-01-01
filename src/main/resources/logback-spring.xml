@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="consoleLog" class ="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %caller{1} %-5level %logger{36} - %msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<appender name="infoLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+		</filter>
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %caller{1} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+		<!-- 滚动策略 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/padb_info.%d.log</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	<appender name="errorLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %caller{1} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+		<!-- 滚动策略 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/padb_error.%d.log</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	<root level="INFO">
+		<appender-ref ref="consoleLog" />
+		<appender-ref ref="infoLogFile" />
+		<appender-ref ref="errorLogFile" />
+	</root>
+</configuration>
