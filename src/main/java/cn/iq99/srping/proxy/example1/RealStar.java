@@ -1,6 +1,6 @@
-package cn.iq99.srping.proxy;
+package cn.iq99.srping.proxy.example1;
 
-public class RealStar implements StarInterface {
+public class RealStar implements IStar {
 
 	@Override
 	public void sing() {

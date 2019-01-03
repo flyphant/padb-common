@@ -1,28 +1,29 @@
-package cn.iq99.srping.proxy;
+package cn.iq99.srping.proxy.example1;
 
 import java.lang.reflect.Proxy;
 
 public class JdkProxyHandler {
 
 	//用来接收真的明星对象
-	private Object realStar;
+	private Object target;
 	
 	/**
 	 * 通过构造方法传进来真实的明星对象
 	 * @param realStar
 	 */
-	public JdkProxyHandler(StarInterface starInterface) {
+	public JdkProxyHandler(Object object) {
 		super();
-		this.realStar=starInterface;
+		this.target=object;
 	}
 	
 	public Object getProxyInstance() {
-        return Proxy.newProxyInstance(realStar.getClass().getClassLoader(),
-                realStar.getClass().getInterfaces(), (proxy, method, args) -> {
-
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
+        		target.getClass().getInterfaces(), (proxy, method, args) -> {
+                	
+                	System.out.println("代理的接口类"+target.getClass().getInterfaces());
                     System.out.println("代理先进行谈判……");
                     // 唱歌需要明星自己来唱
-                    Object object = method.invoke(realStar, args);
+                    Object object = method.invoke(target, args);
                     System.out.println("演出完代理去收钱……");
 
                     return object;

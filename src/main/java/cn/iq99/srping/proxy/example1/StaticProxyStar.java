@@ -1,19 +1,19 @@
-package cn.iq99.srping.proxy;
+package cn.iq99.srping.proxy.example1;
 
 /**
  * 明星的静态代理方法
  * @author jaysonding
  *
  */
-public class StaticProxyStar implements StarInterface {
+public class StaticProxyStar implements IStar {
 	
-	private StarInterface starInterface;
+	private IStar starInterface;
 	
     /**
      * 通过构造方法传进来真实的明星对象
      * @param star star
      */
-    public StaticProxyStar(StarInterface starInterface) {
+    public StaticProxyStar(IStar starInterface) {
         this.starInterface=starInterface;
     }
 

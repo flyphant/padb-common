@@ -1,16 +1,9 @@
-package spring.proxy;
+package cn.iq99.srping.proxy.example1;
 
-import cn.iq99.srping.proxy.example1.CglibProxyHandler;
-import cn.iq99.srping.proxy.example1.JdkProxyHandler;
-import cn.iq99.srping.proxy.example1.RealStar;
-import cn.iq99.srping.proxy.example1.IStar;
-import cn.iq99.srping.proxy.example1.StaticProxyStar;
-
-public class ProxyTest {
+public class ProxyClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 		//真实明星
 		IStar realStar=new RealStar();
 		
@@ -25,7 +18,6 @@ public class ProxyTest {
 		//cglib代理
 		IStar cglibProxy=(IStar) new CglibProxyHandler().getProxyInstance(realStar);
 		cglibProxy.sing();
-
 	}
 
 }
