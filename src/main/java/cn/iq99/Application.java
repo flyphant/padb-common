@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,DataSourceTransactionManagerAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
-public class PadbApplication extends SpringBootServletInitializer{
+public class Application extends SpringBootServletInitializer{
 	
 	@RequestMapping("/")
 	@ResponseBody
@@ -23,7 +23,7 @@ public class PadbApplication extends SpringBootServletInitializer{
 	
 	public static void main(String[] args) {
 		
-		SpringApplication.run(PadbApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
