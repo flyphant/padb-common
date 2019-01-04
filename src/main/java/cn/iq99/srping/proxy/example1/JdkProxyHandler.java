@@ -20,11 +20,11 @@ public class JdkProxyHandler {
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
         		target.getClass().getInterfaces(), (proxy, method, args) -> {
                 	
-                	System.out.println("代理的接口类"+target.getClass().getInterfaces());
-                    System.out.println("代理先进行谈判……");
+                	System.out.println("jdk代理的接口类"+target.getClass().getInterfaces());
+                    System.out.println("jdk代理先进行谈判……");
                     // 唱歌需要明星自己来唱
                     Object object = method.invoke(target, args);
-                    System.out.println("演出完代理去收钱……");
+                    System.out.println("jdk演出完代理去收钱……");
 
                     return object;
                 });

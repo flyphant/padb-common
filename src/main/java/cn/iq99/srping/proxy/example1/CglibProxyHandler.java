@@ -33,10 +33,10 @@ public class CglibProxyHandler implements MethodInterceptor {
 	@Override
 	public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
 		
-        System.out.println("代理先进行谈判……");
+        System.out.println("cglib代理先进行谈判……");
         // 唱歌需要明星自己来唱
         Object result = methodProxy.invokeSuper(object, args);
-        System.out.println("演出完代理去收钱……");
+        System.out.println("cglib演出完代理去收钱……");
         return result;
 	}
 
