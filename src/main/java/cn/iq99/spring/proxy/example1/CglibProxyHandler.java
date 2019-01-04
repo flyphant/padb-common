@@ -1,4 +1,4 @@
-package cn.iq99.srping.proxy.example1;
+package cn.iq99.spring.proxy.example1;
 
 import java.lang.reflect.Method;
 import org.springframework.cglib.proxy.Enhancer;

@@ -1,4 +1,4 @@
-package cn.iq99.srping.proxy.example1;
+package cn.iq99.spring.proxy.example1;
 
 import java.lang.reflect.Proxy;
 
@@ -20,12 +20,15 @@ public class JdkProxyHandler {
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
         		target.getClass().getInterfaces(), (proxy, method, args) -> {
                 	
+        			System.out.println("-------------jdk代理-------------");
                 	System.out.println("jdk代理的接口类"+target.getClass().getInterfaces());
+                	System.out.println("jdk代理的方法"+method);
                     System.out.println("jdk代理先进行谈判……");
                     // 唱歌需要明星自己来唱
                     Object object = method.invoke(target, args);
                     System.out.println("jdk演出完代理去收钱……");
-
+                    System.out.println("-------------jdk代理结束-------------");
+                    
                     return object;
                 });
 	}

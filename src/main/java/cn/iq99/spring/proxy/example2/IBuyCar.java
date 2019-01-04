@@ -1,4 +1,4 @@
-package cn.iq99.srping.proxy.example2;
+package cn.iq99.spring.proxy.example2;
 
 public interface IBuyCar {
 

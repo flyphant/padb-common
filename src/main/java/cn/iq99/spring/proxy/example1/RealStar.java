@@ -1,4 +1,4 @@
-package cn.iq99.srping.proxy.example1;
+package cn.iq99.spring.proxy.example1;
 
 public class RealStar implements IStar {
 

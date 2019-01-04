@@ -1,10 +1,10 @@
 package spring.proxy;
 
-import cn.iq99.srping.proxy.example1.CglibProxyHandler;
-import cn.iq99.srping.proxy.example1.JdkProxyHandler;
-import cn.iq99.srping.proxy.example2.IBuyCar;
-import cn.iq99.srping.proxy.example2.People;
-import cn.iq99.srping.proxy.example2.ProxyPeople;
+import cn.iq99.spring.proxy.example1.CglibProxyHandler;
+import cn.iq99.spring.proxy.example1.JdkProxyHandler;
+import cn.iq99.spring.proxy.example2.IBuyCar;
+import cn.iq99.spring.proxy.example2.People;
+import cn.iq99.spring.proxy.example2.ProxyPeople;
 
 public class ProxyTest2 {
 
