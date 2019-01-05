@@ -8,10 +8,10 @@ public abstract class Template {
 		execute();
 	}
 	
-	public abstract void connect();
+	abstract void connect();
 	
-	public abstract void query();
+	abstract void query();
 	
-	public abstract void execute();
+	abstract void execute();
 	
 }

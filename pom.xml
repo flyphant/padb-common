@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.iq99</groupId>
-	<artifactId>padb</artifactId>
-	<version>0.0.6-RELEASE</version>
-	<name>padb</name>
-	<url>https://github.com/flyphant/padb.git</url>
+	<artifactId>padb-common</artifactId>
+	<version>0.0.1-RELEASE</version>
+	<name>padb-common</name>
+	<url>https://github.com/flyphant/padb-common.git</url>
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -21,8 +21,8 @@
 		</developer>
 	</developers>
 	<scm>
-		<url>https://github.com/flyphant/padb</url>
-		<connection>https://github.com/flyphant/padb.git</connection>
+		<url>https://github.com/flyphant/padb-common</url>
+		<connection>https://github.com/flyphant/padb-common.git</connection>
 	</scm>
 	<distributionManagement>
 		<snapshotRepository>
