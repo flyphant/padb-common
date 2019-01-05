@@ -13,7 +13,8 @@ spring:
     content-type: text/html
     mode: HTML5
 server:
-  context-path: /padb
+  context-path: /
+  port: 80
 scheduler:
   0/10 * * * * ?
 
