@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.iq99</groupId>
 	<artifactId>padb-common</artifactId>
-	<version>0.0.1-RELEASE</version>
+	<version>0.0.2-RELEASE</version>
 	<name>padb-common</name>
 	<url>https://github.com/flyphant/padb-common.git</url>
 	<licenses>
@@ -139,14 +139,4 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
-	
-	<!-- Package as an executable jar -->
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>
