@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.iq99</groupId>
 	<artifactId>padb-common</artifactId>
-	<version>0.0.3-RELEASE</version>
+	<version>0.0.4-RELEASE</version>
 	<name>padb-common</name>
 	<url>https://github.com/flyphant/padb-common.git</url>
 	<licenses>
